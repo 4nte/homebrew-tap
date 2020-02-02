@@ -2,16 +2,16 @@
 class MqttMirror < Formula
   desc "Replicate MQTT traffic from one broker to another."
   homepage "https://github.com/4nte/mqtt-mirror"
-  version "0.0.18"
+  version "0.0.19"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/4nte/mqtt-mirror/releases/download/v0.0.18/mqtt-mirror_0.0.18_Darwin_x86_64.tar.gz"
-    sha256 "1bc617ebbc4493708d584be0d06d5d88338dcb229db9cc16f66aad4900154d7b"
+    url "https://github.com/4nte/mqtt-mirror/releases/download/v0.0.19/mqtt-mirror_0.0.19_Darwin_x86_64.tar.gz"
+    sha256 "8e5019597fe1edc1267e5472c44d99567c1c447c85468588f6751eedc628c5e5"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.0.18/mqtt-mirror_0.0.18_Linux_x86_64.tar.gz"
-      sha256 "79493db298597127dbb8c4850780e9f8a63e8adadc9044ee184729c489e634ff"
+      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.0.19/mqtt-mirror_0.0.19_Linux_x86_64.tar.gz"
+      sha256 "da3326d32b518c1796b7183401ea3d6eb4ace32917fdf9975638615f1d05afac"
     end
   end
 
