@@ -5,20 +5,20 @@
 class MqttMirror < Formula
   desc "Replicate MQTT traffic from one broker to another."
   homepage "https://github.com/4nte/mqtt-mirror"
-  version "0.2.0-rc.10"
+  version "0.2.0-rc.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.10/mqtt-mirror_0.2.0-rc.10_darwin_amd64.tar.gz"
-      sha256 "3338623ffff493016f878055e34ecc6e7a1ddf7d05c6eae292679b2835499880"
+      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.11/mqtt-mirror_0.2.0-rc.11_darwin_amd64.tar.gz"
+      sha256 "037f292af18c6341025da7137f3af9f04055ed5363df92b585c305c9de749dff"
 
       def install
         bin.install "mqtt-mirror"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.10/mqtt-mirror_0.2.0-rc.10_darwin_arm64.tar.gz"
-      sha256 "de9144581792964d7ba9acc36b6c3bce5326b1ee9f11d40decdda339c7548ed0"
+      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.11/mqtt-mirror_0.2.0-rc.11_darwin_arm64.tar.gz"
+      sha256 "b12375dca6864542c12d25c217980f0e79f5f304b92e871457146d6beb553269"
 
       def install
         bin.install "mqtt-mirror"
@@ -27,17 +27,17 @@ class MqttMirror < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.10/mqtt-mirror_0.2.0-rc.10_linux_arm64.tar.gz"
-      sha256 "c74c2e76e56a75cb8bf86ce87b976464fe0b78e7c4c91041bf442e4df76707e7"
+    if Hardware::CPU.intel?
+      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.11/mqtt-mirror_0.2.0-rc.11_linux_amd64.tar.gz"
+      sha256 "13ba67bfe3d7c1747d5672d108f79f1f050924029a78936e0cf20cab413df983"
 
       def install
         bin.install "mqtt-mirror"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.10/mqtt-mirror_0.2.0-rc.10_linux_amd64.tar.gz"
-      sha256 "326990c975ebe30d94134dd0bf82d55f608ca3f1e9927aaae63ceeda5eb22061"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/4nte/mqtt-mirror/releases/download/v0.2.0-rc.11/mqtt-mirror_0.2.0-rc.11_linux_arm64.tar.gz"
+      sha256 "688abf5522ad512a0b0869e441732544bd94a438377ffd319d2f0178665a7b11"
 
       def install
         bin.install "mqtt-mirror"
